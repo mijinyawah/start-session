@@ -1,16 +1,16 @@
-# Memory Engine v1.3.0
+# Engram—An AI Memory Engine (v1.3.0)
 
-Persistent, file-based memory for AI-assisted workflows — works with Claude CoWork and Codex out of the box.
+Engram provides persistent, file-based memory for a non-technical user's AI-assisted workflows. Give your AI assistant lasting context about who you are, how you work, and the projects you work on. By pointing your AI at this memory system structure, you can mitigate missed/hallucinated context, or having to re-explain to the AI where you last left off on a project. 
 
-Give your AI assistant lasting context about who you are, how you work, and where each project stands. No databases, no plugins, no repeated setup. Just files your assistant reads at session start.
+Designed for Claude CoWork, but also works with Codex.
 
 ---
 
 ## Who this is for
 
-- People running multiple ongoing projects with an AI assistant (Claude, Codex, or similar)
-- Creative-technical users who want structure without heavy tooling
-- Solo builders or small teams that value session continuity
+- People running multiple ongoing projects with an AI assistant like Claude Cowork or Codex
+- Creative-technical users who want better project management structure and AI "memory" that isn't overkill
+- Solo builders or small teams that value continuity between AI working sessions
 
 ---
 
@@ -23,7 +23,7 @@ Give your AI assistant lasting context about who you are, how you work, and wher
 
 `AGENTS.md` is a thin pointer so Codex finds the system without duplicating content. Both platforms read from the same canonical source.
 
-> **Note:** trigger phrases in `CLAUDE.md` are protocol instructions, not hard platform automations. If a flow doesn't trigger, type the command directly in chat (e.g. `run onboarding now`, `start session`).
+> **Note:** trigger phrases in `CLAUDE.md` are protocol instructions, not hardcoded automations. If an expected behavior doesn't trigger with natural language, type the command directly in chat (e.g. `run onboarding now`, `start session`).
 
 ---
 
@@ -32,6 +32,15 @@ Give your AI assistant lasting context about who you are, how you work, and wher
 1. Copy this folder to a location you control.
 2. Open this folder as your working directory in CoWork or Codex.
 3. In chat, type `run onboarding now` to begin setup.
+
+### How setup adapts to you
+
+Setup is a single flow that covers your identity, tools, projects, and behavior preferences. Two steps are conditional based on your answers:
+
+- **Technical calibration** runs if you do any coding, scripting, or technical troubleshooting — including creative-technical work like expressions or self-hosted tools.
+- **Agent setup** runs if you want custom behavior modes (e.g. a research mode, a debug mode). You can skip this and add agents later just by asking.
+
+Session commands (`start session`, `end session`, `new project`) are available to everyone regardless of how setup goes.
 
 ---
 
@@ -46,18 +55,7 @@ Give your AI assistant lasting context about who you are, how you work, and wher
 | `templates/project-CLAUDE.md` | Per-project context template |
 | `templates/project-CODEX.md` | Optional phased execution plan template |
 | `resources/example-agent.md` | Format reference for agent instruction files |
-| `projects/` | Project folders created during kickoff |
-
----
-
-## How setup adapts to you
-
-Setup is a single flow that covers your identity, tools, projects, and behavior preferences. Two steps are conditional based on your answers:
-
-- **Technical calibration** runs if you do any coding, scripting, or technical troubleshooting — including creative-technical work like expressions or self-hosted tools.
-- **Agent setup** runs if you want custom behavior modes (e.g. a research mode, a debug mode). You can skip this and add agents later just by asking.
-
-Session commands (`start session`, `end session`, `new project`) are available to everyone regardless of how setup goes.
+| `projects/` | Contains project folders created during kickoff |
 
 ---
 
