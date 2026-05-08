@@ -1,11 +1,11 @@
-       · · · · · · · · · · · · · · · · · ·
-       · · · ────◉────◉──◉────◉──◉──── · ·
-       · · · · · · · · · · · · · · · · · ·
+                                           · · · · · · · · · · · · · · · · · ·
+                                           · · · ────◉────◉──◉────◉──◉──── · ·
+                                           · · · · · · · · · · · · · · · · · ·
 
-              E  N  G  R  A  M
-          ─────────────────────────────
-       file-based memory more ai assistants
-                claude  ·  codex
+                                                    E  N  G  R  A  M
+                                              ─────────────────────────────
+                                          file-based memory more ai assistants
+                                                     claude  ·  codex
                
 # Engram—An AI Memory Engine (v1.3.0)
 
