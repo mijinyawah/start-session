@@ -1,3 +1,14 @@
+·   ·   ·       ·   ·       ·   ·
+          \ /     \     / \ /       / \ /
+       ·───◉───·   ◉───◉   ◉───·───◉   ◉───·
+          / \     /     \ / \       \ / \
+         ·   ·   ·       ·   ·       ·   ·
+
+                 E  N  G  R  A  M
+          ───────────────────────────────
+          file-based memory for ai assistants
+                  claude · codex
+               
 # Engram—An AI Memory Engine (v1.3.0)
 
 Engram provides persistent, file-based memory for a non-technical user's AI-assisted workflows. Give your AI assistant lasting context about who you are, how you work, and the projects you work on. By pointing your AI at this memory system structure, you can mitigate missed/hallucinated context, or having to re-explain to the AI where you last left off on a project. 
