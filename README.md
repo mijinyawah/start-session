@@ -2,14 +2,14 @@
                                            · · · ───◉──◉────◉──◉────◉──◉── · ·
                                            · · · · · · · · · · · · · · · · · ·
 
-                                                    E  N  G  R  A  M
+                                                 S T A R T  S E S S I O N
                                               ─────────────────────────────
                                           file-based memory for ai assistants
                                                      claude  ·  codex
                
-# Engram—An AI Memory Engine (v1.3.0)
+# Start-Session | An AI Memory Engine (v1.3.0)
 
-Engram provides persistent, file-based memory for a non-technical user's AI-assisted workflows. Give your AI assistant lasting context about who you are, how you work, and the projects you work on. By pointing your AI at this memory system structure, you can mitigate missed/hallucinated context, or having to re-explain to the AI where you last left off on a project. 
+Start Session provides persistent, file-based memory for a non-technical user's AI-assisted workflows. Give your AI assistant lasting context about who you are, how you work, and the projects you work on. By pointing your AI at this memory system structure, you can mitigate missed/hallucinated context, or having to re-explain to the AI where you last left off on a project. 
 
 Designed for Claude CoWork, but also works with Codex. [Read about why I built this.](https://cl01w-v2.vercel.app/articles/a-custom-memory-system-for-claude)
 
