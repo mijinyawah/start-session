@@ -1,6 +1,6 @@
 # Projects
 
-Single source of truth for all your projects. This file is read at session start (when no project is named) and is the canonical place to track project status.
+Single source of truth for all your projects. Read at session start when no project is named.
 
 Status key: 🔵 WIP · 🟢 Live · ✅ Complete · ⏸️ On Hold · 📦 Shelved · 💡 Idea
 
@@ -25,7 +25,7 @@ Format (one line per project):
 
 ## 💡 Ideas / Queue
 
-<!-- Reserved IDs and rough ideas you might pick up later. Promote into a category section above when work begins. -->
+<!-- Reserved IDs and rough ideas you might pick up later. Promote to a category section above when work begins. -->
 
 - **[ID-03] — [Idea Name]** 💡 Idea — [one-line description]
 

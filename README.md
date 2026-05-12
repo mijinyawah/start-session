@@ -1,25 +1,27 @@
-                                           · · · · · · · · · · · · · · · · · ·
-                                           · · · ───◉──◉────◉──◉────◉──◉── · ·
-                                           · · · · · · · · · · · · · · · · · ·
+```
+ · · · · · · · · · · · · · · · · · ·
+ · · · ───◉──◉────◉──◉────◉──◉── · ·
+ · · · · · · · · · · · · · · · · · ·
 
-                                                 S T A R T  S E S S I O N
-                                              ─────────────────────────────
-                                          file-based memory for ai assistants
-                                                     claude  ·  codex
-               
-# Start-Session | An AI Memory Engine (v1.3.0)
+       S T A R T  S E S S I O N
+    ─────────────────────────────
+file-based memory for ai assistants
+           claude  ·  codex
+```
 
-Start Session provides persistent, file-based memory for a non-technical user's AI-assisted workflows. Give your AI assistant lasting context about who you are, how you work, and the projects you work on. By pointing your AI at this memory system structure, you can mitigate missed/hallucinated context, or having to re-explain to the AI where you last left off on a project. 
+# start-session — AI Memory Engine (v2.0.0)
 
-Designed for Claude CoWork, but also works with Codex. [Read about why I built this.](https://cl01w-v2.vercel.app/articles/a-custom-memory-system-for-claude)
+Persistent, file-based memory for AI-assisted workflows. Give your assistant lasting context about who you are, how you work, and where each project stands — without databases, cloud sync, or repeated setup.
+
+Available as a **plugin** (recommended) or as a standalone file template.
 
 ---
 
 ## Who this is for
 
-- People running multiple ongoing projects with an AI assistant like Claude Cowork or Codex
-- Creative-technical users who want better project management structure and AI "memory" that isn't overkill
-- Solo builders or small teams that value continuity between AI working sessions
+- People running multiple ongoing projects with Claude CoWork or Codex
+- Creative-technical users who want session continuity without heavy tooling
+- Solo builders or small teams that value consistent context across sessions
 
 ---
 
@@ -27,67 +29,80 @@ Designed for Claude CoWork, but also works with Codex. [Read about why I built t
 
 | Platform | How it works |
 |----------|-------------|
-| **Claude** (CoWork, Claude Code) | Auto-discovers `CLAUDE.md` |
-| **Codex** (folder-based sessions) | Auto-discovers `AGENTS.md`, which points at `CLAUDE.md` |
-
-`AGENTS.md` is a thin pointer so Codex finds the system without duplicating content. Both platforms read from the same canonical source.
-
-> **Note:** trigger phrases in `CLAUDE.md` are protocol instructions, not hardcoded automations. If an expected behavior doesn't trigger with natural language, type the command directly in chat (e.g. `run onboarding now`, `start session`).
+| **Claude CoWork** | Install the plugin · commands available as `/setup`, `/start-session`, etc. |
+| **Claude Code** | Install the plugin · same commands available in terminal |
+| **Codex** | Use the file template · auto-discovers `AGENTS.md` → `CLAUDE.md` |
 
 ---
 
-## Quick start
+## Install (plugin — recommended)
 
-1. Copy this folder to a location you control.
-2. Open this folder as your working directory in CoWork or Codex.
-3. In chat, type `run onboarding now` to begin setup.
+```
+/plugin marketplace add mijinyawah/start-session
+/plugin install start-session@start-session
+```
 
-### How setup adapts to you
-
-Setup is a single flow that covers your identity, tools, projects, and behavior preferences. Two steps are conditional based on your answers:
-
-- **Technical calibration** runs if you do any coding, scripting, or technical troubleshooting — including creative-technical work like expressions or self-hosted tools.
-- **Agent setup** runs if you want custom behavior modes (e.g. a research mode, a debug mode). You can skip this and add agents later just by asking.
-
-Session commands (`start session`, `end session`, `new project`) are available to everyone regardless of how setup goes.
+Then run `/setup` to create your workspace. Updates ship automatically — no reinstall needed.
 
 ---
 
-## Folder structure
+## Install (file template — no plugin required)
+
+1. Download or clone this repo.
+2. Copy the contents of the `scaffold/` folder to a location you control.
+3. Open that folder as your working directory in CoWork or Codex.
+4. In chat, type `run onboarding now` to begin setup.
+
+> **Note:** trigger phrases are protocol instructions, not hard automations. If a flow doesn't trigger, type the command directly (e.g. `run onboarding now`, `start session`, `end session`).
+
+---
+
+## Commands (plugin)
+
+| Command | What it does |
+|---------|-------------|
+| `/setup` | First-time onboarding. Runs a 9-step flow and generates your workspace files. |
+| `/start-session` | Orients the assistant to your active projects before you begin work. |
+| `/end-session` | Saves progress, updates project status, and sets clear next steps. |
+| `/checkpoint` | Mid-session save without ending the session. |
+| `/new-project` | Kicks off a new tracked project with a context file and index entry. |
+| `/migrate` | Adds missing sections/files after a plugin update. Additive only — never overwrites. |
+
+---
+
+## Workspace structure (generated by `/setup`)
 
 | Path | Purpose |
 |------|---------|
-| `CLAUDE.md` | Global memory, setup flow, session protocols, agent behavior (canonical) |
-| `AGENTS.md` | Codex-side pointer to `CLAUDE.md` |
-| `memory/glossary.md` | Terms, tools, acronyms, shorthand |
-| `memory/projects.md` | Single source of truth for all projects across every state (WIP / Live / Complete / On Hold / Shelved / Idea) |
-| `templates/project-CLAUDE.md` | Per-project context template |
-| `templates/project-CODEX.md` | Optional phased execution plan template |
-| `resources/example-agent.md` | Format reference for agent instruction files |
-| `projects/` | Contains project folders created during kickoff |
+| `CLAUDE.md` | Your identity, tools, preferences, hard rules, references, and agent index. The primary context file. |
+| `AGENTS.md` | Thin pointer to `CLAUDE.md` for Codex auto-discovery. |
+| `memory/projects.md` | Single source of truth for all your projects across every state. |
+| `memory/glossary.md` | Terms, acronyms, and shorthand the assistant should recognize. |
+| `templates/project-CLAUDE.md` | Template for new per-project context files. |
+| `templates/project-CODEX.md` | Template for phased execution plans (optional). |
+| `resources/example-agent.md` | Format reference for custom agent instruction files. |
+| `projects/` | Per-project folders created by `/new-project`. |
 
 ---
 
-## How to keep context clean across sessions
+## Keeping context clean
 
-The system stays current through three commands you can use in chat at any time:
+Three commands do all the maintenance:
 
-**`start session`** — tells the assistant to orient itself before you begin work. It reads your active projects, confirms where things stand, and asks what you want to focus on. Use this at the top of any working session so nothing gets assumed.
+**`/start-session`** — orients the assistant before you begin. Reads your active projects, confirms where things stand, asks what you want to work on.
 
-**`end session`** — triggers a context save. The assistant updates your project file with decisions made, notes any open questions, rewrites the "next session" section with clear next steps, and updates the project status in `memory/projects.md` if anything changed. This is how continuity carries forward — run it before you close out.
+**`/end-session`** — saves your progress. Updates the project file with decisions made, rewrites next steps, and updates the project index if status changed.
 
-**`new project`** — kicks off a new project. The assistant asks for a name, type, and description, creates the project folder and files, and adds it to the project index. You don't create or touch any files manually.
-
-Everything else — adding shorthand to the glossary, keeping project files in sync — happens in the background as you work. The three commands above are the only thing you need to remember.
+**`/new-project`** — kicks off a new project. Creates the folder and context file, registers it in the index. No manual file editing.
 
 ---
 
 ## Release notes
 
-See `CHANGELOG.md` for what's included in this release.
+See `CHANGELOG.md`.
 
 ---
 
 ## License
 
-MIT
+MIT · [buymeacoffee.com/phantomspacecop](https://buymeacoffee.com/phantomspacecop)

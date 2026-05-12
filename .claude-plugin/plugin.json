@@ -1,0 +1,12 @@
+{
+  "name": "start-session",
+  "description": "Persistent, file-based memory for AI-assisted workflows. Gives your assistant lasting context about who you are, how you work, and where each project stands. Works with Claude CoWork and Codex.",
+  "author": {
+    "name": "Hafsah Mijinyawa",
+    "email": "chatter@wetcloudmedia.com"
+  },
+  "homepage": "https://github.com/mijinyawah/start-session",
+  "repository": "https://github.com/mijinyawah/start-session",
+  "license": "MIT",
+  "keywords": ["memory", "sessions", "projects", "productivity", "context"]
+}

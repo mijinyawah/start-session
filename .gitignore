@@ -1,14 +1,2 @@
-# macOS
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Editors
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Logs and temp
-*.log
-.tmp/
+*.DS_Store

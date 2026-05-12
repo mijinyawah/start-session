@@ -6,8 +6,8 @@
 
 ## Overview
 
-- **Project ID:** [e.g. CL-A01, or any identifier you use]
-- **Type:** [Tool / Website / Video / Design / Experiment / Other]
+- **Project ID:** [e.g. HS-A01, or any identifier you use]
+- **Type:** [Tool / Website / Bot / Video / Design / Experiment / Other]
 - **Owner:** [Your name]
 - **Status:** [Phase X — description]
 - **Started:** [YYYY-MM-DD]
@@ -40,13 +40,11 @@
 
 ## Architecture
 
-<!-- Brief description of how the system fits together. Diagrams, flowcharts, or prose — whatever's clearest. -->
+<!-- Brief description of how the system fits together. -->
 
 [High-level description of how the main pieces connect.]
 
 ### Key Files
-
-<!-- List the files the assistant should know about when working on this project. -->
 
 - `[path/to/file]` — [what it does]
 - `[path/to/file]` — [what it does]
@@ -69,19 +67,17 @@
 
 - [e.g. TypeScript-first with strict interfaces]
 - [e.g. No external dependencies without explicit approval]
-- [e.g. Keep all exports client-side for v1]
 
 ---
 
 ## Design Direction
 
-<!-- Delete this section if design isn't relevant to the project. -->
+<!-- Delete this section if design isn't relevant. -->
 
 ### Visual Language
 [Describe the visual style: layout priorities, tone, key UI decisions]
 
 ### Key Design Decisions
-- [Decision and rationale]
 - [Decision and rationale]
 
 ### Design Files
@@ -91,8 +87,6 @@
 
 ## Decisions Log
 
-<!-- Log significant decisions so future sessions (and you) understand why things are the way they are. -->
-
 | Date | Decision | Rationale |
 |------|----------|-----------|
 | [YYYY-MM-DD] | [What was decided] | [Why] |
@@ -101,26 +95,19 @@
 
 ## Known Issues & Gotchas
 
-<!-- Things that are known to be tricky, fragile, or non-obvious. -->
-
-- [Issue or gotcha]
 - [Issue or gotcha]
 
 ---
 
 ## Open Questions
 
-<!-- Unresolved decisions. Clear these out as they're answered — move resolved ones to Decisions Log. -->
-
-- [ ] [Question]
 - [ ] [Question]
 
 ---
 
 ## Next Session
 
-<!-- This section is rewritten at the end of each session by the assistant.
-     It captures what to pick up next time so you don't have to re-orient. -->
+<!-- Rewritten at session end by the assistant. Captures what to pick up next time. -->
 
 [To be filled at session end.]
 
@@ -128,7 +115,4 @@
 
 ## Links & Resources
 
-<!-- Relevant docs, repos, design files, reference projects. -->
-
-- [Label](URL or path)
 - [Label](URL or path)

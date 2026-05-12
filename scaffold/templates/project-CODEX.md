@@ -26,7 +26,7 @@
 - [ ] [e.g. Set up folder structure and config files]
 - [ ] [e.g. Confirm dev environment runs without errors]
 
-**Sign-off gate:** [What must be true before Phase 1 begins. e.g. "Dev server runs, no errors, basic file structure confirmed."]
+**Sign-off gate:** [What must be true before Phase 1 begins.]
 
 ---
 
@@ -74,8 +74,6 @@
 
 ## Phase Log
 
-<!-- Track when phases were completed and any notes on what changed. -->
-
 | Phase | Completed | Notes |
 |-------|-----------|-------|
 | Phase 0 | [date or "pending"] | |
@@ -84,8 +82,6 @@
 ---
 
 ## v1 Definition of Done
-
-<!-- What does "finished" actually mean for this project? Be specific. -->
 
 - [ ] [e.g. Core feature works end-to-end without errors]
 - [ ] [e.g. Deployed to [platform] and accessible at [URL]]

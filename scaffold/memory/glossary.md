@@ -2,7 +2,7 @@
 
 Your personal decoder ring. Add terms, tools, acronyms, and shorthand that the assistant should recognize when you use them.
 
-the assistant reads this file at session start — anything defined here won't need explaining mid-conversation.
+The assistant reads this file at session start — anything defined here won't need explaining mid-conversation.
 
 ---
 

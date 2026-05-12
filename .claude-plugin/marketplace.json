@@ -1,0 +1,15 @@
+{
+  "name": "start-session",
+  "owner": {
+    "name": "Hafsah Mijinyawa",
+    "email": "chatter@wetcloudmedia.com"
+  },
+  "description": "Persistent, file-based memory for AI-assisted workflows — Claude CoWork and Codex.",
+  "plugins": [
+    {
+      "name": "start-session",
+      "source": "./",
+      "description": "Gives your AI assistant lasting context about who you are, how you work, and where each project stands. Run /setup once — then /start-session, /end-session, and /new-project to keep everything in sync."
+    }
+  ]
+}
