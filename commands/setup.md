@@ -1,3 +1,7 @@
+---
+description: Run first-time onboarding and generate your workspace files
+argument-hint: ""
+---
 # /setup
 
 Run first-time onboarding for the start-session memory system. This command scaffolds the user's workspace and populates it with their context.

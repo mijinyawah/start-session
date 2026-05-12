@@ -1,3 +1,7 @@
+---
+description: Add missing sections from newer versions without overwriting existing content
+argument-hint: ""
+---
 # /migrate
 
 Add new sections and files to an existing start-session workspace after a plugin update. Always additive — never removes or overwrites existing user content.

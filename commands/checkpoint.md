@@ -1,3 +1,7 @@
+---
+description: Save mid-session progress without ending the session
+argument-hint: ""
+---
 # /checkpoint
 
 Save progress mid-session without ending the session. Use this when the session is ongoing but something important should be preserved.

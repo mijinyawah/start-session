@@ -1,3 +1,7 @@
+---
+description: Orient yourself at the top of every session — load project context and pick up from where you left off
+argument-hint: "[project-name]"
+---
 # /start-session
 
 Orient to the user's workspace before beginning work. Always confirm orientation before execution.

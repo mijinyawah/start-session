@@ -1,3 +1,7 @@
+---
+description: Kick off a new tracked project with a context file and project index entry
+argument-hint: "<project-name>"
+---
 # /new-project
 
 Kick off a new project. Creates a tracked project folder with a populated context file and registers it in the project index.

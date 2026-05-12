@@ -1,6 +1,15 @@
 ---
 name: session-management
 description: >
+  Use this skill when working with the start-session plugin's workspace structure,
+  file conventions, and session rules. Triggers on: starting a session, ending a session,
+  checkpointing progress, working with project files, reading CLAUDE.md or memory files,
+  or when the user asks how memory or tracking works.
+version: 2.0.0
+---
+---
+name: session-management
+description: >
   Context layer for the start-session memory system. Load this skill whenever working within a
   start-session workspace — any folder containing a CLAUDE.md populated by /setup. Triggers include:
   references to projects, sessions, workspace files, memory files, the project index, or when

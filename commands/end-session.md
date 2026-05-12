@@ -1,3 +1,7 @@
+---
+description: Save all session progress to permanent project records at the end of a session
+argument-hint: ""
+---
 # /end-session
 
 Save session progress and set up clear next steps. Run before closing out a working session.
