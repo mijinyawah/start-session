@@ -6,7 +6,7 @@
        S T A R T  S E S S I O N
     ─────────────────────────────
 file-based memory for ai assistants
-           claude  ·  codex
+      claude cowork  ·  codex
 ```
 
 # Start-Session — An AI Memory Engine (v2.0.0)
