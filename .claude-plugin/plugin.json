@@ -1,5 +1,6 @@
 {
   "name": "start-session",
+  "version": "2.0.0",
   "description": "Persistent, file-based memory for AI-assisted workflows. Gives your assistant lasting context about who you are, how you work, and where each project stands. Works with Claude CoWork and Codex.",
   "author": {
     "name": "Hafsah Mijinyawa",
