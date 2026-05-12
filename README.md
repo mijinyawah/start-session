@@ -9,7 +9,7 @@ file-based memory for ai assistants
            claude  ·  codex
 ```
 
-# start-session — AI Memory Engine (v2.0.0)
+# Start-Session — An AI Memory Engine (v2.0.0)
 
 Persistent, file-based memory for AI-assisted workflows. Give your assistant lasting context about who you are, how you work, and where each project stands — without databases, cloud sync, or repeated setup.
 
