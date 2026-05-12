@@ -44,6 +44,7 @@ Available as a **plugin** (recommended) or as a standalone file template.
 
 Then run `/setup` to create your workspace. Updates ship automatically — no reinstall needed.
 
+Or download and install session-start.plugin from this repo.
 ---
 
 ## Install (file template — no plugin required)
@@ -57,7 +58,7 @@ Then run `/setup` to create your workspace. Updates ship automatically — no re
 
 ---
 
-## Commands (plugin)
+## Commands
 
 | Command | What it does |
 |---------|-------------|
